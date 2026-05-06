@@ -1,12 +1,17 @@
 """
 Experiment 6
-Title: Implementation of DES.
+Title: Implementation of DES (Data Encryption Standard).
 
 Theory:
-- Data Encryption Standard (DES): The most popular symmetric key algorithm.
-- DES is a symmetric key encryption algorithm.
-- Key size: 8 bytes (64 bits).
-- Same key is used for encryption and decryption.
+- **Introduction**: Developed in the 1970s by IBM and adopted as a federal standard. It is a symmetric-key block cipher.
+- **Architecture**: DES is based on the **Feistel Network** structure, which divides the data block into two halves and applies a series of substitutions and permutations.
+- **Key and Block Size**:
+    - **Block Size**: 64 bits (8 bytes).
+    - **Key Size**: 64 bits total, but 8 bits are used for parity, resulting in an **effective key length of 56 bits**.
+- **Processing**: 
+    - The algorithm involves **16 rounds** of identical operations.
+    - Each round uses a unique 48-bit subkey derived from the main 56-bit key.
+- **Security Status**: Due to its small key size, DES is considered insecure against modern brute-force attacks and has been replaced by more robust standards like AES.
 """
 
 # pip install pycryptodome

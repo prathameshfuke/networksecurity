@@ -2,12 +2,19 @@
 Experiment 3
 Title: Write a program to implement digital Signature.
 
-Theory: Working flow using RSA algorithm
-- Message is converted into a numeric value
-- Private key signs the message
-- Public key verifies the signature
-- RSA works under modulo n
-- Decrypted value equals message mod n
+Theory: Digital Signature using RSA Algorithm
+- **Definition**: A digital signature is a mathematical technique used to validate the authenticity and integrity of a digital document, message, or software.
+- **Core Security Goals**:
+    - **Authentication**: Confirms the sender's identity.
+    - **Integrity**: Ensures the message hasn't been tampered with during transit.
+    - **Non-repudiation**: The sender cannot deny having sent the message.
+- **Working Principle**:
+    - Unlike encryption (where the Public key encrypts and Private key decrypts), a **Digital Signature** uses the **Private key to sign** and the **Public key to verify**.
+- **Mathematical Foundations**:
+    - RSA security relies on the difficulty of factoring large prime numbers.
+    - **Key Generation**: Two primes `p, q` are used to find `n = p * q` and `phi = (p-1)(q-1)`. Public key `e` and Private key `d` are chosen such that `(e * d) mod phi = 1`.
+    - **Signing**: `S = M^d mod n` (using sender's private key).
+    - **Verification**: `M' = S^e mod n` (using sender's public key). If `M' == M`, the signature is valid.
 """
 
 # Convert message to number

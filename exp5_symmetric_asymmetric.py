@@ -3,15 +3,20 @@ Experiment 5
 Title: Implementation of Symmetric and Asymmetric cryptography.
 
 Theory:
-1. Symmetric Cryptography
-   - Caesar Cipher - Same key is used for encryption and decryption
-   - Faster and simpler
-   - Example: Caesar cipher, DES, AES
+1. Symmetric Cryptography (Secret Key Cryptography)
+   - **Logic**: Uses a single shared secret key for both encryption and decryption.
+   - **Characteristics**: Fast, efficient for large amounts of data, and uses fewer computational resources.
+   - **Key Distribution Problem**: Securely sharing the secret key between sender and receiver is the primary challenge. If the key is compromised, all communication is exposed.
+   - **Algorithms**: Caesar Cipher, DES, AES, Blowfish.
 
-2. Asymmetric Cryptography
-   - Simple RSA - Uses two keys: public and private
-   - Public key encrypts, private key decrypts
-   - Example: RSA
+2. Asymmetric Cryptography (Public Key Cryptography)
+   - **Logic**: Uses a pair of mathematically related keys: a **Public Key** (shared with everyone) and a **Private Key** (kept secret by the owner).
+   - **Working**: 
+     - **Encryption**: Public key encrypts, Private key decrypts.
+     - **Digital Signatures**: Private key signs, Public key verifies.
+   - **Characteristics**: Solves the key distribution problem but is significantly slower than symmetric cryptography due to complex mathematical operations.
+   - **Algorithms**: RSA, ECC, Diffie-Hellman.
+   - **Hybrid Approach**: In practice (like HTTPS/TLS), asymmetric crypto is used to securely exchange a symmetric key, which is then used for the actual data transfer.
 """
 
 # Symmetric Encryption (Caesar Cipher)

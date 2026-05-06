@@ -1,13 +1,20 @@
 """
 Experiment 7
-Title: Implementation of AES.
+Title: Implementation of AES (Advanced Encryption Standard).
 
 Theory:
-- Advanced Encryption Standard (AES) is a Symmetric key cryptography.
-- Block size: 128 bits.
-- Key sizes: 128 / 192 / 256 bits.
-- Same key is used for encryption and decryption.
-- More secure than DES.
+- **Introduction**: AES was established by NIST in 2001 to replace DES. It is the global standard for symmetric-key encryption.
+- **Architecture**: Unlike DES's Feistel structure, AES uses a **Substitution-Permutation Network (SPN)**, where the entire data block is processed in each round.
+- **Block and Key Sizes**:
+    - **Block Size**: Fixed at 128 bits (16 bytes).
+    - **Key Sizes**: 128, 192, or 256 bits.
+- **Round Operations**: Each round (except the final one) consists of four layers:
+    1. **SubBytes**: Non-linear byte substitution using an S-box.
+    2. **ShiftRows**: Cyclic shifting of rows in the state matrix.
+    3. **MixColumns**: Mathematical mixing of column data (skipped in the last round).
+    4. **AddRoundKey**: XORing the state with a round key.
+- **Rounds**: The number of rounds depends on key size: 10 rounds (128-bit), 12 rounds (192-bit), or 14 rounds (256-bit).
+- **Efficiency**: AES is highly efficient in both hardware and software, making it suitable for everything from smart cards to high-speed network traffic.
 """
 
 # pip install pycryptodome

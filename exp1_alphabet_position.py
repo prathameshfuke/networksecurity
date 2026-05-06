@@ -3,12 +3,14 @@ Experiment 1
 Title: Write a program to perform encryption and decryption 
 
 Theory:
-- Encrypts letters -> their alphabet position
-- Uppercase letters -> positive numbers
-- Lowercase letters -> negative numbers
-- Space -> space (unchanged)
-- Decrypts numbers -> back to letters
-- Works for full words/sentences
+- This experiment implements a **Numeric Substitution Cipher** where each letter is mapped to its numerical position in the English alphabet (A=1, B=2, ..., Z=26).
+- **Mapping Logic**:
+    - **Uppercase letters**: Represented by positive integers from 1 to 26.
+    - **Lowercase letters**: Represented by negative integers from -1 to -26 to maintain case information in a numeric format.
+    - **Spaces**: Preserved as double spaces to clearly demarcate word boundaries.
+- **Mathematical Basis**: 
+    - For a character 'C', its position 'P' is calculated using ASCII values: `P = ord(C) - ord('A') + 1`.
+- **Security**: This is a simple encoding scheme rather than a cryptographic cipher, as it lacks a secret key and follows a predictable 1:1 mapping.
 """
 
 def encrypt(text):
