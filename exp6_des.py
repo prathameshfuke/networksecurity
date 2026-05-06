@@ -1,5 +1,7 @@
 """
 Experiment 6
+Name: Prathamesh Fuke
+Roll Number: TE258
 Title: Implementation of DES (Data Encryption Standard).
 
 Theory:
