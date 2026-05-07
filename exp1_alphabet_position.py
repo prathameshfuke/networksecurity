@@ -15,6 +15,11 @@ Theory:
 - **Security**: This is a simple encoding scheme rather than a cryptographic cipher, as it lacks a secret key and follows a predictable 1:1 mapping.
 """
 
+# Experiment 1
+# Name: Prathamesh Fuke
+# Roll Number: TE258
+# Title: Write a program to perform encryption and decryption 
+
 def encrypt(text):
     result = ""
     for char in text:
